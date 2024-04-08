@@ -22,9 +22,12 @@ const Navigation = ({ active }: Menutypes) => {
   return (
     <>
       <div className="flex justify-between my-10 mx-10 items-center ">
-        <div className="relative w-[113px] h-[32px] lg:w-[169.58px] lg:h-[48px]">
-          <Image src={Logo} alt="logo" fill className="object-cover" />
-        </div>
+        <Link
+          href="/"
+          className="relative w-[113px] h-[32px] lg:w-[169.58px] lg:h-[48px]"
+        >
+          <Image src={Logo} alt="logo" fill className="object-cover" priority />
+        </Link>
         {navLinks.map(({ id, title, link }) => {
           return (
             <Link

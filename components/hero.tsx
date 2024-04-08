@@ -1,16 +1,19 @@
 import React from "react";
 import { data } from "@/public/data";
-//import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Link from "next/link";
+import Article from "./Article/Article";
+import ArticleTypes from "./interfaces/ArticleTypes";
 
 const Hero = () => {
   return (
-    <section className="">
-      {/* <div className="w-[310px h-[250px] bg-red-800"></div>
-      <div className="w-[310px h-[400px] bg-red-800"></div>
-      <div className="w-[310px h-[285px] bg-red-800"></div>
-      <div className="w-[310px h-[250px] bg-red-800"></div> */}
-      hello
-    </section>
+    <>
+      <div className="grid grid-cols-4 gap-10">
+        {data.map((item, index) => {
+          const { name, year } = item;
+          return <Article key={index} {...item} />;
+        })}
+      </div>
+    </>
   );
 };
 
