@@ -7,4 +7,12 @@ export default interface ArticleTypes {
     image: any;
     name: string;
   };
+  images: {
+    thumbnail: string;
+    hero: {
+      small: any;
+      large: any;
+    };
+    gallery: string;
+  };
 }
