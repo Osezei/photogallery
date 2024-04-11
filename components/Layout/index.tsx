@@ -6,7 +6,7 @@ const Layout = ({ children, activePage }: LayoutTypes) => {
   return (
     <main>
       <Navigation active={activePage} />
-      <div>{children}</div>
+      <div className="mx-[24px] md:mx-10">{children}</div>
     </main>
   );
 };

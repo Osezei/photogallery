@@ -1,15 +1,16 @@
 import React from "react";
 import Layout from "@/components/Layout/index";
+import Slideshow from "@/components/Slideshow";
 
-const Slideshow = () => {
+const SlidePage = () => {
   const activePage = "start slideshow";
   return (
     <div>
       <Layout activePage={activePage}>
-        <p>kjhbirqiehbihb</p>
+        <Slideshow />
       </Layout>
     </div>
   );
 };
 
-export default Slideshow;
+export default SlidePage;
