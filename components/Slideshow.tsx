@@ -43,8 +43,8 @@ const Slideshow = () => {
                   <>
                     <p> {index}</p>
                     <div
-                      className="bg-red-700 h-1"
-                      style={{ width: `100%-${index}%` }}
+                      className="bg-red-700 h-1 w-[500px]"
+                      style={{ width: `${index}%` }}
                     ></div>
                     <p className="font-bold text-[18px] mb-[8px]">
                       {item.name}

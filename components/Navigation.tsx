@@ -4,6 +4,7 @@ import Menutypes from "./interfaces/MenuTypes";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/assets/shared/logo.svg";
+import Container from "./Container/Container";
 
 const navLinks: NavigationTypes[] = [
   {
@@ -21,7 +22,7 @@ const navLinks: NavigationTypes[] = [
 const Navigation = ({ active }: Menutypes) => {
   return (
     <>
-      <div className="flex justify-between mx-[24px] md:mx-10 my-10 items-center ">
+      <div className="flex justify-between my-10 items-center ">
         <Link
           href="/"
           className="relative w-[113px] h-[32px] lg:w-[169.58px] lg:h-[48px]"
@@ -44,7 +45,7 @@ const Navigation = ({ active }: Menutypes) => {
           );
         })}
       </div>
-      <div className="max-w-full lg:mx-10 h-[1px] bg-[#979797] mb-[24px] md:mb-10"></div>
+      <div className="max-w-full h-[1px] bg-[#979797] mb-[24px] md:mb-10"></div>
     </>
   );
 };

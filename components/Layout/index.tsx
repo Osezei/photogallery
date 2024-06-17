@@ -1,13 +1,14 @@
 import React from "react";
 import Navigation from "../Navigation";
 import LayoutTypes from "../interfaces/LayoutTypes";
+import Container from "../Container/Container";
 
 const Layout = ({ children, activePage }: LayoutTypes) => {
   return (
-    <main>
+    <Container>
       <Navigation active={activePage} />
-      <div className="mx-[24px] md:mx-10">{children}</div>
-    </main>
+      <div className="">{children}</div>
+    </Container>
   );
 };
 
