@@ -2,6 +2,7 @@ import React from "react";
 import ArticleTypes from "../interfaces/ArticleTypes";
 import Image from "next/image";
 import Link from "next/link";
+import { TwitterShare } from "react-share-kit";
 
 const Article = ({
   name,
@@ -34,6 +35,9 @@ const Article = ({
           </p>
         </div>
       </Link>
+      <TwitterShare
+        url={"https://photogalleryvvv-git-main-osezeis-projects.vercel.app/"}
+      />
     </>
   );
 };

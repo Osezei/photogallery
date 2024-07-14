@@ -4,8 +4,8 @@ import { data } from "@/public/data";
 import Link from "next/link";
 import Image from "next/image";
 import Slide from "./Slide/Slide";
-import Next from "@/public/assets/shared/icon-next-button.svg";
-import Prev from "@/public/assets/shared/icon-back-button.svg";
+import Footer from "./Footer/Footer";
+import Buttons from "./Buttons/Buttons";
 
 const Slideshow = () => {
   const [current, setCurrent] = useState(0);
@@ -42,52 +42,18 @@ const Slideshow = () => {
           );
         })}
       </article>
+
       <footer className="flex justify-between items-center my-[25px]">
         <div>
           {data.map((item, index) => {
             return (
               <div key={index}>
-                {index === current && (
-                  <>
-                    <p> {index}</p>
-                    <div className="">
-                      <div
-                        className="bg-red-700 h-1 w-[500px]"
-                        style={{ width: `${progress}%` }}
-                      ></div>
-                    </div>
-                    <p className="font-bold text-[18px] mb-[8px]">
-                      {item.name}
-                    </p>
-                    <p className="text-[13px] opacity-[0.7528]">
-                      {item.artist.name}
-                    </p>
-                  </>
-                )}
+                {index === current && <Footer key={index} {...item} />}
               </div>
             );
           })}
         </div>
-        <div className="flex gap-[40px]">
-          <button onClick={prevSLide}>
-            <Image
-              src={Prev}
-              alt="prev"
-              width={25}
-              height={24}
-              className="bg-contain"
-            />
-          </button>
-          <button onClick={nextSLide}>
-            <Image
-              src={Next}
-              alt="next"
-              width={25}
-              height={24}
-              className="bg-contain"
-            />
-          </button>
-        </div>
+        <Buttons prevSLide={prevSLide} nextSLide={nextSLide} />
       </footer>
     </>
   );
