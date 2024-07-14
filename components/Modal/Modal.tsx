@@ -1,13 +1,19 @@
 import React from "react";
 import ModalType from "../interfaces/ModalType";
 import ArticleTypes from "../interfaces/ArticleTypes";
+import Image from "next/image";
 
-const Modal = ({ name }: any) => {
+const Modal = ({ name, images }: any) => {
   return (
-    <div>
-      {name}
-      Modal
-      {/* <h4 className="text-red-700 text-3xl">{name}</h4> */}
+    <div className="">
+      <Image
+        src={images.hero.large}
+        width={597}
+        height={712}
+        priority
+        alt={name}
+        className="bg-contain"
+      />
     </div>
   );
 };

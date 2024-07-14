@@ -17,10 +17,15 @@ const Slide = ({
   return (
     <section>
       {openModal && (
-        <div>
-          <button onClick={() => setOpenModal(false)}>close</button>
-          <Modal name={name} />
-        </div>
+        <section className="fixed top-0 left-0 bg-black/90  h-screen w-full fle flex-col justify-cente items-cente z-30">
+          <button
+            onClick={() => setOpenModal(false)}
+            className="text-white w-full text-righ pb-[41px"
+          >
+            close
+          </button>
+          <Modal name={name} images={images} />
+        </section>
       )}
       <div className="flex justify-between">
         <div className="flex">
@@ -33,6 +38,12 @@ const Slide = ({
               className="bg-cover"
               sizes="310px"
             />
+            <button
+              onClick={() => setOpenModal(true)}
+              className="absolute uppercase bottom-[16px] left-[16px] w-[152px] h-[40px] bg-black text-white text-[10px] font-bold leading-[2.14px]"
+            >
+              view image
+            </button>
 
             <div className="w-[65px] h-[238px] z-10 bg-white absolute top-0 right-0"></div>
           </div>
@@ -68,8 +79,6 @@ const Slide = ({
           </Link>
         </div>
       </div>
-      <button onClick={() => setOpenModal(true)}>click</button>
-      <p>{name}</p>
     </section>
   );
 };

@@ -10,6 +10,14 @@ import Prev from "@/public/assets/shared/icon-back-button.svg";
 const Slideshow = () => {
   const [current, setCurrent] = useState(0);
 
+  const [progress, setProgress] = useState(50);
+
+  const settings = {
+    // afterChange: (current) => {
+    //   setProgress(100 / data.length);
+    // },
+  };
+
   //   const itemData = localStorage.getItem("current");
   //   const result = itemData ? JSON.parse(itemData) : current;
   //setCurrent(result);
@@ -42,10 +50,12 @@ const Slideshow = () => {
                 {index === current && (
                   <>
                     <p> {index}</p>
-                    <div
-                      className="bg-red-700 h-1 w-[500px]"
-                      style={{ width: `${index}%` }}
-                    ></div>
+                    <div className="">
+                      <div
+                        className="bg-red-700 h-1 w-[500px]"
+                        style={{ width: `${progress}%` }}
+                      ></div>
+                    </div>
                     <p className="font-bold text-[18px] mb-[8px]">
                       {item.name}
                     </p>
