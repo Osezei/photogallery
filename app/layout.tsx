@@ -17,14 +17,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <Head>
+      <Head>
         <meta property="og:image" content="<generated>" />
         <meta property="og:image:type" content="<generated>" />
         <meta property="og:image:width" content="<generated>" />
         <meta property="og:image:height" content="<generated>" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-      </Head> */}
+        {/* twitter */}
+        <meta name="twitter:image" content="<generated>" />
+        <meta name="twitter:image:type" content="<generated>" />
+        <meta name="twitter:image:width" content="<generated>" />
+        <meta name="twitter:image:height" content="<generated>" />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
