@@ -2,7 +2,7 @@ import React from "react";
 import ArticleTypes from "../interfaces/ArticleTypes";
 import Image from "next/image";
 import Link from "next/link";
-import { TwitterShare } from "react-share-kit";
+import { TwitterShare, FacebookShare, LinkedinShare } from "react-share-kit";
 
 const Article = ({
   name,
@@ -35,9 +35,24 @@ const Article = ({
           </p>
         </div>
       </Link>
-      <TwitterShare
-        url={"https://photogalleryvvv-git-main-osezeis-projects.vercel.app/"}
-      />
+      <div className="flex">
+        <TwitterShare
+          size={28}
+          url={"https://photogalleryvvv-git-main-osezeis-projects.vercel.app/"}
+        />
+        <FacebookShare
+          url={"https://photogalleryvvv-git-main-osezeis-projects.vercel.app/"}
+          quote={
+            "react-share-kit - social share buttons for next & react apps."
+          }
+          hashtag={"#react-share-kit"}
+          size={28}
+        />
+        <LinkedinShare
+          size={28}
+          url={"https://photogalleryvvv-git-main-osezeis-projects.vercel.app/"}
+        />
+      </div>
     </>
   );
 };
