@@ -47,6 +47,9 @@ const Article = ({
       >
         Facebok
       </FacebookShare>
+      <LinkedinShare url="https://photogalleryvvv.vercel.app/">
+        Linkedin
+      </LinkedinShare>
     </>
   );
 };
