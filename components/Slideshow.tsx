@@ -10,17 +10,9 @@ import Buttons from "./Buttons/Buttons";
 const Slideshow = () => {
   const [current, setCurrent] = useState(0);
 
-  const [progress, setProgress] = useState(50);
-
-  const settings = {
-    // afterChange: (current) => {
-    //   setProgress(100 / data.length);
-    // },
+  const maths = (a: number) => {
+    return ((a + 1) * 100) / length;
   };
-
-  //   const itemData = localStorage.getItem("current");
-  //   const result = itemData ? JSON.parse(itemData) : current;
-  //setCurrent(result);
 
   const length = data.length;
 
@@ -37,18 +29,34 @@ const Slideshow = () => {
           return (
             <div key={index}>
               {index === current && <Slide key={index} {...item} />}
-              <section>{/* <p>{item.name}</p> */}</section>
             </div>
           );
         })}
       </article>
+      {/* dash */}
+      <div
+        className="bg-[#c35656] h-[1px] w-[100%] ease-in-out duration-300 mt-[75px]"
+        style={{
+          width: `${Math.round(maths(current))}%`,
+          backgroundColor: `black`,
+        }}
+      ></div>
+      <div className="bg-[#7D7D7D] h-[1px] w-full"></div>
+      {/* end of dash */}
 
       <footer className="flex justify-between items-center my-[25px]">
         <div>
           {data.map((item, index) => {
             return (
               <div key={index}>
-                {index === current && <Footer key={index} {...item} />}
+                {index === current && (
+                  <Footer
+                    key={index}
+                    {...item}
+                    length={length}
+                    current={current}
+                  />
+                )}
               </div>
             );
           })}

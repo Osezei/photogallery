@@ -5,14 +5,13 @@ import Image from "next/image";
 
 const Modal = ({ name, images }: any) => {
   return (
-    <div className="">
+    <div className="relative max-w-[972px] max-h-[712px] bg-cente">
       <Image
         src={images.hero.large}
-        width={597}
-        height={712}
         priority
         alt={name}
-        className="bg-contain"
+        className=" w-auto h-auto"
+        sizes="712px"
       />
     </div>
   );

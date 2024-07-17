@@ -6,11 +6,9 @@ import Container from "@/components/Container/Container";
 const SlidePage = () => {
   const activePage = "start slideshow";
   return (
-    <div>
-      <Layout activePage={activePage}>
-        <Slideshow />
-      </Layout>
-    </div>
+    <Layout activePage={activePage}>
+      <Slideshow />
+    </Layout>
   );
 };
 

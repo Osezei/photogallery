@@ -7,7 +7,7 @@ const Layout = ({ children, activePage }: LayoutTypes) => {
   return (
     <Container>
       <Navigation active={activePage} />
-      <div className="">{children}</div>
+      <div>{children}</div>
     </Container>
   );
 };

@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Article from "../Article/Article";
 
+
+
 const Slide = ({
   name,
   year,
@@ -17,14 +19,16 @@ const Slide = ({
   return (
     <section>
       {openModal && (
-        <section className="fixed top-0 left-0 bg-black/90  h-screen w-full fle flex-col justify-cente items-cente z-30">
-          <button
-            onClick={() => setOpenModal(false)}
-            className="text-white w-full text-righ pb-[41px"
-          >
-            close
-          </button>
-          <Modal name={name} images={images} />
+        <section className="fixed top-0 left-0 bg-black/90 w-full z-30 flex justify-center items-center h-screen">
+          <div className="flex flex-col gap-4">
+            <button
+              onClick={() => setOpenModal(false)}
+              className="text-white flex justify-end"
+            >
+              close
+            </button>
+            <Modal name={name} images={images} />
+          </div>
         </section>
       )}
       <div className="flex justify-between">
