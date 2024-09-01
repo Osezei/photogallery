@@ -2,7 +2,6 @@
 import React from "react";
 import { data } from "@/public/data";
 import Article from "./Article/Article";
-import Link from "next/link";
 
 const Hero = () => {
   return (

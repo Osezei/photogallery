@@ -24,45 +24,49 @@ const Slideshow = () => {
   };
   return (
     <>
-      <article className="mt-[76px]">
-        {data.map((item, index) => {
-          return (
-            <div key={index}>
-              {index === current && <Slide key={index} {...item} />}
-            </div>
-          );
-        })}
-      </article>
-      {/* dash */}
-      <div
-        className="bg-[#c35656] h-[1px] w-[100%] ease-in-out duration-300 mt-[75px]"
-        style={{
-          width: `${Math.round(maths(current))}%`,
-          backgroundColor: `black`,
-        }}
-      ></div>
-      <div className="bg-[#7D7D7D] h-[1px] w-full"></div>
-      {/* end of dash */}
-
-      <footer className="flex justify-between items-center my-[25px]">
-        <div>
+      <div className="flex h-screen flex-col">
+        <article className="mt-[40px] lg:mt-[76px] flex-1">
           {data.map((item, index) => {
             return (
               <div key={index}>
-                {index === current && (
-                  <Footer
-                    key={index}
-                    {...item}
-                    length={length}
-                    current={current}
-                  />
-                )}
+                {index === current && <Slide key={index} {...item} />}
               </div>
             );
           })}
-        </div>
-        <Buttons prevSLide={prevSLide} nextSLide={nextSLide} />
-      </footer>
+        </article>
+        <section className="flex-initial">
+          {/* dash */}
+          <div
+            className="bg-[#c35656] h-[1px] w-[100%] ease-in-out duration-300 mt-[75px]"
+            style={{
+              width: `${Math.round(maths(current))}%`,
+              backgroundColor: `black`,
+            }}
+          ></div>
+          <div className="bg-[#7D7D7D] h-[1px] w-full"></div>
+          {/* end of dash */}
+
+          <footer className="flex justify-between items-center my-[25px]">
+            <div>
+              {data.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {index === current && (
+                      <Footer
+                        key={index}
+                        {...item}
+                        length={length}
+                        current={current}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            <Buttons prevSLide={prevSLide} nextSLide={nextSLide} />
+          </footer>
+        </section>
+      </div>
     </>
   );
 };
