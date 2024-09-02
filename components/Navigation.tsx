@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/assets/shared/logo.svg";
 import Container from "./Container/Container";
+import "animate.css";
 
 const navLinks: NavigationTypes[] = [
   {
@@ -45,7 +46,7 @@ const Navigation = ({ active }: Menutypes) => {
           );
         })}
       </div>
-      <div className="max-w-full h-[1px] bg-[#979797] mb-[24px] md:mb-10"></div>
+      <div className="max-w-full h-[1px] bg-[#979797] mb-[24px] md:mb-10 animate__animated animate__slideInLeft "></div>
     </>
   );
 };

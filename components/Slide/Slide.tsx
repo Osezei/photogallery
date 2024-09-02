@@ -4,6 +4,7 @@ import Modal from "../Modal/Modal";
 import Image from "next/image";
 import Link from "next/link";
 import Article from "../Article/Article";
+import "animate.css";
 
 const Slide = ({
   name,
@@ -62,12 +63,12 @@ const Slide = ({
               alt={name}
               width={128}
               height={128}
-              className="ml-[30px]"
+              className="ml-[30px] animate__animated animate__zoomIn animate__infinite animate__slower animate__delay-5s"
             />
           </div>
         </div>
         <div className="relative h-[571px]">
-          <p className=" text-[200px] text-right font-bold leading-[150px] text-[#F3F3F3]">
+          <p className=" text-[200px] text-right font-bold leading-[150px] text-[#F3F3F3] animate__animated animate__rotateIn animate__delay-2s">
             {year}
           </p>
           <p className="w-[300px] absolute top-[115px] left-0 text-[#7D7D7D] lg:leading-[28px] text-[14px] font-semibold">
@@ -118,12 +119,12 @@ const Slide = ({
               alt={name}
               width={128}
               height={128}
-              className="mt-[238px]"
+              className="mt-[238px] animate__animated animate__zoomIn animate__infinite animate__slower animate__delay-5s"
             />
           </div>
         </div>
         <div className="h-[378px] mb-[53px] relative">
-          <p className="text-[200px] font-bold leading-[150px] text-[#F3F3F3]">
+          <p className="text-[200px] font-bold leading-[150px] text-[#F3F3F3] animate__animated animate__rotateIn animate__delay-2s">
             {year}
           </p>
           <div className="absolute top-[75px] left-[111px]">
@@ -144,7 +145,7 @@ const Slide = ({
       </div>
       {/* end of tablet screen */}
       {/* mobile view */}
-      <div className="md:hidden flex justify-center">
+      <div className="md:hidden flex justify-center max-h-f">
         <div>
           <div className="flex flex-col ">
             <div className="h-[334px]">
@@ -181,11 +182,11 @@ const Slide = ({
                 alt={name}
                 width={64}
                 height={64}
-                className=""
+                className="animate__animated animate__zoomIn animate__infinite animate__slower animate__delay-5s"
               />
               {/* end of artist image */}
               {/* year */}
-              <p className="absolute text-[100px] z-[-10] top-[20px] right-0 font-bold leading-[150px] text-[#F3F3F3]">
+              <p className="absolute text-[100px] z-[-10] top-[20px] right-0 font-bold leading-[150px] text-[#F3F3F3] animate__animated animate__rotateIn animate__delay-2s">
                 {year}
               </p>
               {/* end of year */}
