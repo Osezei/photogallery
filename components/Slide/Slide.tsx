@@ -18,7 +18,7 @@ const Slide = ({
     <section>
       {openModal && (
         <section className="fixed top-0 left-0 bg-black/90 w-full z-30 flex justify-center items-center h-screen">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2 md:gap-4">
             <button
               onClick={() => setOpenModal(false)}
               className="text-white flex justify-end"
