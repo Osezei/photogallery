@@ -18,7 +18,7 @@ const Slide = ({
   return (
     <section>
       {openModal && (
-        <section className="fixed top-0 left-0 bg-black/90 w-full z-30 flex justify-center items-center h-screen">
+        <section className="fixed top-0 left-0 bg-black/90 w-full z-30 flex justify-center items-center h-screen animate__animated animate__fadeIn">
           <div className="flex flex-col gap-2 md:gap-4">
             <button
               onClick={() => setOpenModal(false)}

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Modal = ({ name, images }: any) => {
   return (
-    <div className="relative max-w-[327px] min-h-[449px] md:max-w-[972px] md:max-h-[712px] ">
+    <div className="relative max-w-[327px] min-h-[449px] md:max-w-[972px] md:max-h-[712px] flex-1 ">
       <Image
         src={images.hero.large}
         priority
